@@ -7,36 +7,59 @@
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
-        padding: 0;
-        margin: 20px;
+        margin: 0;
+        padding: 20px;
         background-color: #242424;
-        color: white;
+        color: #fff;
       }
-      .nav-container h2 {
-        margin-top: 40px;
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
       }
       .nav1 {
         background-color: #eaeaea;
-        font-size: 18px;
+        padding: 10px;
       }
       .nav1 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: space-around;
-        list-style-type: none;
+        align-items: center;
       }
       .nav1 li {
-        padding: 10px;
+        display: inline;
       }
       .nav1 a {
         text-decoration: none;
-        color: black;
+        color: #202020;
+        padding: 5px 15px;
+        position: relative;
       }
-      .nav1 button {
-        border-radius: 8px;
-        padding: 3px 15px;
+      .nav1 a:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: #0a65c7;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav1 .login-btn {
         background-color: #254bf6;
         color: #fff;
-        font-size: 16px;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
       }
     </style>
   </head>
