@@ -8,7 +8,8 @@ int main(void) {
 
     while(i < 7) {
         if(i == 3) {
-            break;
+            i++;
+            continue;
         }
         cout << "Current number is: " << arr[i] << endl;
         i = i + 1;
