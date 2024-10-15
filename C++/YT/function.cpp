@@ -5,14 +5,14 @@ void sayHello(void) {
     puts("hello there!");
 }
 
-void sayTwo(void) {
-    puts("2");
+int sayTwo(void) {
+    return 3;
 }
 
 int main(void) {
     
     sayHello();
-    sayTwo();
+    printf("%d\n", sayTwo());
     
     return 0;
 }
