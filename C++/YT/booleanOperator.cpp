@@ -4,10 +4,11 @@ using namespace std;
 
 int main(void) {
     
-    bool isSignedIn = true;
+    bool isfbUser = false;
+    bool isGoogleUser = true;
     bool isAdmin = true;
 
-    if(isSignedIn && isAdmin) {
+    if((isGoogleUser || isfbUser) && isAdmin) {
         puts("Welcome Admin!");
     } else {
         puts("No Admin Acess!");
