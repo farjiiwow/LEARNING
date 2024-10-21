@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>farjii Card</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        background-image: linear-gradient(
+          to left top,
+          #dc4218,
+          #da5631,
+          #d86747,
+          #d3775d,
+          #cd8672
+        );
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        /* height: 600px; */
+        width: 400px;
+        background-color: #111111;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 30px;
+        /* border: 2px solid #dc4218; */
+      }
+
+      .photo {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: #fff;
+        /* margin-top: 50px; */
+        border: 2px solid #dc4218;
+        transition: transform 0.3s ease;
+      }
+
+      .photo:hover {
+        transform: scale(1.2);
+      }
+
+      .about {
+        text-align: center;
+        color: #fff;
+      }
+
+      .name {
+        font-style: italic;
+        font-size: 24px;
+      }
+
+      a {
+        text-decoration: none;
+        /* border: 3px solid #fff; */
+        padding: 15px 45px;
+        border-radius: 25px;
+        background-color: #ffc300;
+        /* color: #fff; */
+        margin: 35px;
+        color: black;
+      }
+
+      a:hover {
+        background-color: #dc4218;
+        color: #fff;
+      }
+      .link {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <img src="-qv0255.jpg" alt="farjiiwow" title="farjii" class="photo" />
+        <div class="about">
+          <p class="name">farjii</p>
+          <p class="knowledge">
+            C || C++ || Python || Full Stack Web Developer
+          </p>
+        </div>
+        <div class="link">
+          <a href="https://github.com/farjiiwow" class="github" target="_blank"
+            >Github</a
+          >
+          <a href="https://x.com/farjiiwow" class="twitter" target="_blank"
+            >X</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
