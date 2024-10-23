@@ -32,6 +32,8 @@
         font-weight: bold;
         font-family: "Dancing Script", cursive;
         font-optical-sizing: auto;
+        /* border: 2px solid black;
+        border-radius: 20px; */
       }
 
       .grid {
@@ -47,15 +49,142 @@
       .cartoons {
         background-color: #000;
         border-radius: 20px;
+        border: 2px solid black;
       }
 
       /* .members:nth-child(even) {
-        background-color: yellowgreen;
-      } */
+              background-color: yellowgreen;
+            } */
+
+      .photo {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid black;
+      }
 
       .two {
         grid-column: 2/3;
         grid-row: 1/3;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .two .photo {
+        width: 300px;
+        height: 300px;
+      }
+
+      .one,
+      .four {
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+      }
+
+      .five,
+      .three {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-right: 50px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .one {
+        background: rgb(255, 215, 0);
+        background: rgb(131, 58, 180);
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 29, 1) 34%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
+
+      .five {
+        background: rgb(252, 176, 69);
+        background: linear-gradient(
+          90deg,
+          rgba(252, 176, 69, 1) 0%,
+          rgba(253, 29, 29, 1) 53%,
+          rgba(131, 58, 180, 1) 100%
+        );
+      }
+
+      .three {
+        background: rgb(222, 69, 252);
+        background: linear-gradient(
+          90deg,
+          rgba(222, 69, 252, 1) 0%,
+          rgba(29, 146, 253, 1) 78%,
+          rgba(131, 58, 180, 1) 100%
+        );
+      }
+
+      .four {
+        background: rgb(131, 58, 180);
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(29, 146, 253, 1) 20%,
+          rgba(222, 69, 252, 1) 100%
+        );
+      }
+
+      .two {
+        background: rgb(180, 58, 58);
+        background: linear-gradient(
+          90deg,
+          rgba(180, 58, 58, 1) 0%,
+          rgba(253, 251, 29, 1) 49%,
+          rgba(69, 137, 252, 1) 100%
+        );
+      }
+
+      .onee,
+      .threee,
+      .fourr,
+      .fivee {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 350px;
+        width: 300px;
+        border-radius: 20px;
+        margin: auto;
+      }
+
+      .twoo {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 350px;
+        width: 500px;
+        border-radius: 20px;
+        margin-top: 35px;
+      }
+
+      .about {
+        text-align: center;
+        font-weight: bold;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      p {
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-size: 24px;
       }
     </style>
   </head>
@@ -64,11 +193,73 @@
       <div class="content">
         <div class="heading">Cartoons I Like</div>
         <div class="grid">
-          <div class="cartoons one"></div>
-          <div class="cartoons two"></div>
-          <div class="cartoons three"></div>
-          <div class="cartoons four"></div>
-          <div class="cartoons five"></div>
+          <div class="cartoons one">
+            <div class="photo"><img src="bheem.jpg" alt="bheem" /></div>
+            <div class="about onee">
+              <b>Chhota Bheem</b>
+              <hr width="90%" height="2px" color="#fff" />
+              <p>
+                Chhota Bheem is an Indian animated series adventures about a boy
+                named Bheem and his friends in fictional village of Dholakpur.
+                Bheem and his friends are usually involved in protecting the
+                village from various evil forces.
+              </p>
+            </div>
+          </div>
+          <div class="cartoons two">
+            <div class="photo"><img src="pokemon.jpg" alt="pokemon" /></div>
+            <div class="about twoo">
+              <b>Pokemon</b>
+              <hr width="90%" height="2px" color="#fff" />
+              <p>
+                The Pokémon cartoon is about Ash Ketchum, a 10-year-old Pokémon
+                trainer from Pallet Town, and his Pikachu, who are on a journey
+                to become the world's greatest Pokémon Master. Ash makes many
+                friends, including Misty, a water-type Pokémon trainer, and
+                Brock, a Pokémon breeder.
+              </p>
+            </div>
+          </div>
+          <div class="cartoons three">
+            <div class="photo"><img src="doreamon.jpg" alt="doraemon" /></div>
+            <div class="about threee">
+              <b>Doraemon</b>
+              <hr width="90%" height="2px" color="#fff" />
+              <p>
+                Doraemon is a male cat robot from the 22nd century, with no ears
+                and a blue color, travels back in time with the help of a time
+                machine into the 21st century to help a boy who belongs to “The
+                Nobi family” named Nobita Nobi, another main character of the
+                series.
+              </p>
+            </div>
+          </div>
+          <div class="cartoons four">
+            <div class="photo"><img src="hattori.jpg" alt="hattori" /></div>
+            <div class="about fourr">
+              <b>Ninja Hattori</b>
+              <hr width="90%" height="2px" color="#fff" />
+              <p>
+                Hattori a ninja boy who has come from the Iga mountains is now a
+                part of the Mitsuba family along with his brother Shinzo and his
+                ninja dog. Hattori helps Kenichi with his problems and
+                constantly keeps an eye on him as a good friend.
+              </p>
+            </div>
+          </div>
+          <div class="cartoons five">
+            <div class="photo"><img src="sinchan.jpeg" alt="sinchan" /></div>
+            <div class="about fivee">
+              <b>Shinchan</b>
+              <hr width="90%" height="2px" color="#fff" />
+              <p>
+                Shinnosuke Nohara is 5 years old and goes to kindergarten. He
+                loves beautiful ladies and stirs things up by always going at
+                his own pace. This kindergartner certainly knows how to shake
+                things up, but that's Shinchan, the most popular kid in Japan.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
