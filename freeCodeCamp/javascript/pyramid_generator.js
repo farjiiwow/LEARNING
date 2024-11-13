@@ -10,8 +10,8 @@ function padRow(rowNumber, totalRowCount) {
   );
 }
 
-for (let i = count; i > 0; i--) {
-  rows.push(padRow(i, count));
+for (let i = 1; i < count; i++) {
+  rows.unshift(padRow(i, count));
 }
 
 let result = "";
