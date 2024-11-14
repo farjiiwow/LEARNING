@@ -1,16 +1,9 @@
 #include <iostream>
+#include "adder.h"
 using namespace std;
 
 void lifeup(int &life) {
     ++(life);
-}
-
-int addme(int a, int b) {
-    return a + b;
-}
-
-float addme(float a, float b) {
-    return a + b;
 }
 
 int main(void) {
