@@ -1,5 +1,5 @@
 #include <iostream>
-#define NULL 0
+
 using namespace std;
 
 void printval(int a) {
@@ -18,7 +18,7 @@ int main(void) {
 
     printval(5);
     printval(5.5);
-    printval(NULL);
+    printval(nullptr);
 
     return 0;
 }
