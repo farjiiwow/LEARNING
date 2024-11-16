@@ -1,9 +1,15 @@
 #include <iostream>
-#include "adder.h"
+
 using namespace std;
 
 void lifeup(int &life) {
     ++(life);
+}
+
+template <typename T>
+
+T addme(T a, T b) {
+    return a + b;
 }
 
 int main(void) {
