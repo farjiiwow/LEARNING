@@ -91,6 +91,32 @@
           border-color: black;
         }
       }
+
+      .Footer p {
+        display: inline;
+      }
+
+      @media (max-width: 815px) {
+        .Card {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .body {
+          overflow: scroll;
+          grid-template-rows: auto;
+          grid-template-columns: auto;
+        }
+
+        .Footer p {
+          display: block;
+        }
+
+        .Footer {
+          margin: 10px;
+          padding: 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -192,7 +218,8 @@
         </div>
       </div>
       <div class="Footer box" style="text-align: center; color: gray">
-        <p>Copyright &copy; 2024 farjiiwow</p>
+        <p>Copyright &copy; 2024</p>
+        <p>farjiiwow</p>
       </div>
     </div>
     <script
