@@ -16,6 +16,8 @@
         margin: 0px;
         padding: 0px;
         height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: #f0f0f0; */
       }
 
       .body {
@@ -23,13 +25,13 @@
         gap: 10px;
         margin: 10px;
         grid-template-columns: 1400px;
-        grid-template-rows: 40vh 50vh 56px;
+        grid-template-rows: 40vh 20vh 15vh 110px;
         overflow: hidden;
         justify-content: center;
       }
 
       .box {
-        background-color: red;
+        /* background-color: red; */
         /* height: 300px; */
         width: 100%;
         border-radius: 10px;
@@ -43,11 +45,49 @@
       }
 
       .Card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .card-box {
-        height: 200px;
-        width: 200px;
+        max-width: 300px;
+        /* height: 40vh;   */
+        box-shadow: 0px 0px 15px gray;
+        border-radius: 10px;
+      }
+
+      .text {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .heading {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid black;
+        animation: typing 3s steps(22, end) forwards,
+          blink-caret 0.5s step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0; /* Start with no visible text */
+        }
+        to {
+          width: 100%; /* Reveal the full text */
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
       }
     </style>
   </head>
@@ -90,10 +130,49 @@
           </button>
         </div>
       </div>
+      <div class="text">
+        <h2 class="heading">Recommended Playlist...</h2>
+      </div>
       <div class="Card box">
-        <div class="card-box card-box1"></div>
-        <div class="card-box card-box2"></div>
-        <div class="card-box card-box3"></div>
+        <div class="card-box card-box1">
+          <div class="card" style="width: 18rem">
+            <img src="python.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-box card-box2">
+          <div class="card" style="width: 18rem">
+            <img src="django.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-box card-box3">
+          <div class="card" style="width: 18rem">
+            <img src="js.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="Footer box"></div>
     </div>
