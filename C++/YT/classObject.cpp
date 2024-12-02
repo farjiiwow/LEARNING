@@ -4,11 +4,13 @@
 using namespace std;
 
 class User {
-    int secret = 22;
+    int _secret = 22;
 
     public:     
     string name = "default";
     void classMessage(void){cout << "Class is great " << name << endl;}
+    void setSecret(const int & newSecret){_secret = newSecret;}
+    int getSecret(void){return _secret;}
 };
 
 
@@ -17,6 +19,9 @@ int main(void) {
     User sam;
     sam.name = "Sam";
     sam.classMessage();
+    sam.setSecret(444);
+    cout << sam.getSecret() << endl;
+    
 
     User farjii;
     farjii.classMessage();
