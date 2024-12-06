@@ -8,11 +8,18 @@ class User {
 
     public:     
     string name = "default";
-    void classMessage(void){cout << "Class is great " << name << endl;}
+    void classMessage(void);
     void setSecret(const int & newSecret){_secret = newSecret;}
-    int getSecret(void) const {return _secret;}
+    int getSecret(void) const;
 };
 
+void User::classMessage(void) {
+    cout << "Class is great " << name << endl;
+}
+
+int User::getSecret(void) const {
+    return _secret;
+}
 
 int main(void) {
     
