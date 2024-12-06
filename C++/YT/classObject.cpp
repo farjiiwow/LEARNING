@@ -10,7 +10,7 @@ class User {
     string name = "default";
     void classMessage(void){cout << "Class is great " << name << endl;}
     void setSecret(const int & newSecret){_secret = newSecret;}
-    int getSecret(void){return _secret;}
+    int getSecret(void) const {return _secret;}
 };
 
 
@@ -28,5 +28,8 @@ int main(void) {
     farjii.name = "farjiiwow";
     farjii.classMessage();
     
+    const User rock;
+    cout << rock.getSecret() << endl;
+
     return 0;
 }
