@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>College Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">College Survey Form</h1>
+    <p id="description">Thankyou for filling these survey form</p>
+    <div class="form">
+      <form id="survey-form">
+        <fieldset>
+          <label id="name-label" for="name"
+            >Name:
+            <input type="text" id="name" required placeholder="Enter your name"
+          /></label>
+          <label for="email" id="email-label"
+            >Email:
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+          /></label>
+          <label for="number" id="number-label"
+            >Age (optional):
+            <input
+              id="number"
+              type="number"
+              min="16"
+              max="24"
+              placeholder="Enter your age"
+          /></label>
+          <label for="dropdown">What is your branch:</label
+          ><select id="dropdown">
+            <option>(Choose one)</option>
+            <option>CSE Core</option>
+            <option>CSE AIML</option>
+            <option>CSE AI</option>
+            <option>CSE DS</option>
+            <option>Mechanical Engineering</option>
+            <option>Electrical Engineering</option>
+            <option>Civil Engineering</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>What is your future goal:</legend>
+          <label for="oncampus"
+            ><input
+              type="radio"
+              id="oncampus"
+              name="goal"
+              value="oncampus"
+              class="inline"
+              checked
+            />On-Campus Placement</label
+          >
+          <label for="offcampus"
+            ><input
+              class="inline"
+              type="radio"
+              id="offcampus"
+              name="goal"
+              value="offcampus"
+            />Off-Campus Placement</label
+          >
+          <label for="further"
+            ><input
+              type="radio"
+              id="further"
+              name="goal"
+              value="higher"
+              class="inline"
+            />Higher Studies</label
+          >
+        </fieldset>
+        <fieldset>
+          <legend>What is the best thing you like about college</legend>
+          <label for="nothing"
+            ><input
+              id="nothing"
+              type="checkbox"
+              value="nothing"
+              class="inline"
+              checked
+            />Nothing</label
+          >
+          <label for="faculty"
+            ><input
+              id="faculty"
+              type="checkbox"
+              value="faculty"
+              class="inline"
+            />Faculty</label
+          >
+          <label for="campus"
+            ><input
+              id="campus"
+              type="checkbox"
+              value="campus"
+              class="inline"
+            />Campus</label
+          >
+          <label for="environment"
+            ><input
+              id="environment"
+              type="checkbox"
+              value="environment"
+              class="inline"
+            />Environment</label
+          >
+          <label for="infra"
+            ><input
+              id="infra"
+              type="checkbox"
+              value="infra"
+              class="inline"
+            />Infrastructure</label
+          >
+          <label for="other"
+            ><input
+              id="other"
+              type="checkbox"
+              value="other"
+              class="inline"
+            />Other</label
+          >
+        </fieldset>
+        <fieldset>
+          <legend>Any suggestion which can improve college</legend>
+          <textarea
+            id="improve"
+            placeholder="Any Suggestion..."
+            rows="4"
+            cols="40"
+          ></textarea>
+        </fieldset>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
