@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WWE Wrestler</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .navbar {
+        background-color: gray;
+        width: 100%;
+        height: 60px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: auto;
+        margin: auto;
+      }
+
+      .navbar li {
+        list-style: none;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      p,
+      ul,
+      form,
+      table {
+        text-align: center;
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 600px;
+        height: 350px;
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+      li {
+        padding: 10px;
+      }
+
+      th,
+      td,
+      tr {
+        border: 1px black solid;
+      }
+
+      th,
+      tr,
+      td {
+        padding: 20px;
+      }
+
+      table {
+        display: flex;
+        justify-content: center;
+      }
+
+      form {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      label,
+      input {
+        margin: 10px;
+      }
+
+      input {
+        width: 600px;
+        height: 40px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#wrestler">WWE Wrestler</a></li>
+        <li><a href="#brand">WWE Brand</a></li>
+        <li><a href="#champion">Current Champions</a></li>
+        <li><a href="#form">Favourite Wrestler</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h1 id="wrestler">WWE Wrestler</h1>
+      <div class="image">
+        <img
+          src="https://media.zenfs.com/en/variety_finance_606/df24778438665920831e680c95d1a055"
+          alt="WWE network"
+          srcset=""
+        />
+      </div>
+      <h2 id="brand">WWE Brand</h2>
+      <p>WWE has 3 brand</p>
+      <ul class="brandlist">
+        <li>
+          WWE RAW<br />
+          <img
+            src="https://lastwordonsports.com/prowrestling/wp-content/uploads/sites/15/2024/04/33.jog_-scaled.jpg"
+            alt="WWE RAW"
+            srcset=""
+          />
+        </li>
+        <li>
+          WWE Smackdown<br />
+          <img
+            src="https://s.yimg.com/ny/api/res/1.2/JDRdinmnNCpqykajlEek.w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/wrestle_zone_910/3935983046ac73ee9f2ab7e4ce9ac950"
+            alt="WWE smackdown"
+            srcset=""
+          />
+        </li>
+        <li>
+          WWE NXT<br />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9e/NXT2024.jpg"
+            alt="WWE NXT"
+            srcset=""
+          />
+        </li>
+      </ul>
+      <h2 id="champion">Current Champions</h2>
+      <ul>
+        <li>
+          <h3>RAW</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Championship</th>
+                <td>World Heavy Weight Championship</td>
+                <td>Women World Championship</td>
+                <td>WWE Intercontinental Championship</td>
+                <td>WWE Women Intercontinental Championship</td>
+                <td>World Tag Team Championship</td>
+              </tr>
+              <tr>
+                <th>Current Champions</th>
+                <td>Gunther</td>
+                <td>Rhea Ripley</td>
+                <td>Bron Breakker</td>
+                <td>Lyra Valkyria</td>
+                <td>The War Raiders</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <h3>Smackdown</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Championship</th>
+                <td>Undisputed WWE Championship</td>
+                <td>WWE Women Championship</td>
+                <td>WWE United State Championship</td>
+                <td>WWE Women United State Championship</td>
+                <td>WWE Tag Team Championship</td>
+              </tr>
+              <tr>
+                <th>Current Champions</th>
+                <td>Cody Rhodes</td>
+                <td>Tiffany Stratton</td>
+                <td>Shinsuke Nakamura</td>
+                <td>Chelsea Green</td>
+                <td>DIY</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <h3>NXT</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Championship</th>
+                <td>NXT Championship</td>
+                <td>NXT Women Championship</td>
+                <td>NXT North American Championship</td>
+                <td>NXT Women North American Championship</td>
+                <td>NXT Heritage Championship</td>
+              </tr>
+              <tr>
+                <th>Current Champions</th>
+                <td>Oba Femi</td>
+                <td>Giulia</td>
+                <td>Tony D'Angelo</td>
+                <td>Fallon Henley</td>
+                <td>Lexis King</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+      <form action="#" id="form">
+        <h2>Favourite WWE Wrestler</h2>
+        <label for="favourite">Who is your favourite WWE Wrestler</label>
+        <input type="text" id="favourite" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
