@@ -34,7 +34,10 @@ int main(void) {
     {
         // shared_ptr<User> tim(new User());
         shared_ptr<User> tim = make_shared<User>();
+        weak_ptr<User> wtim = tim;
+        // weak_ptr<User> wtimm = make_weak<User>(); //not allowed
         shared_ptr<User> timm = tim; // no error
+
     }
     
     return 0;
