@@ -19,6 +19,7 @@ public:
 
 int main(void) {
     
+    // unique pointer
     {
         // unique_ptr<User> sam(new User());
         unique_ptr<User> sam = make_unique<User>();
@@ -27,7 +28,14 @@ int main(void) {
         // not allowed
         // unique_ptr<User> samm = sam;
     }
-    cout << "outside code\n";
+    // cout << "outside code\n";
+
+    // shared pointer
+    {
+        // shared_ptr<User> tim(new User());
+        shared_ptr<User> tim = make_shared<User>();
+        shared_ptr<User> timm = tim; // no error
+    }
     
     return 0;
 }
