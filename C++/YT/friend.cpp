@@ -9,6 +9,7 @@ class Man {
 protected:
     Man(const string & name, const int & age) : _name(name), _age(age){}
     void run(void){puts("I can run");}
+    int getAge(void) {return _age;}
 public: 
     void sayName(void) const;
 };
@@ -23,7 +24,8 @@ class Superman : public Man {
     bool flight;
 public:
     Superman(string name) : Man(name, 26){}
-    void run(void) {printf("age is : %d\n", _age);} // private member are not accessible
+    // void run(void) {printf("age is : %d\n", _age);} // private member are not accessible
+    void run(void) {printf("Age is : %d\n", getAge());} // we can use getter and setter to access it but there are another method too which is known as friend function
 };
 
 class Spiderman : public Man {
