@@ -4,7 +4,7 @@ using namespace std;
 
 class One {
 public: 
-    void intro(void) {
+    virtual void intro(void) {
         cout << "I am one\n";
     }
 };  
