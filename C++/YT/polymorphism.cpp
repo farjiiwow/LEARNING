@@ -28,13 +28,15 @@ public:
 
 int main(void) {
     
-    One a;
+    One *a;
     Two b;
     Three c;
 
-    a.intro();
-    b.intro();
-    c.intro();
+    a = &b;
+    a->intro();
+
+    a=&c;
+    a->intro();
     
     return 0;
 }
