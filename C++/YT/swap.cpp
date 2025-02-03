@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(int &a, int &b) ;
+void swap(int *a, int *b) ;
 
 int main(void) {
     int a;
@@ -13,15 +13,15 @@ int main(void) {
     printf("First number : %d\n", a);
     printf("Second number : %d\n", b);
     cout << "Number after swapping are : " << endl;
-    swap(a, b);
+    swap(&a, &b);
     printf("First number : %d\n", a);
     printf("Second number : %d\n", b);
     return 0;
 }
 
-void swap(int &a, int &b) {
+void swap(int *a, int *b) {
     int swap;
-    swap = a;
-    a = b;
-    b = swap;
+    swap = *a;
+    *a = *b;
+    *b = swap;
 }
