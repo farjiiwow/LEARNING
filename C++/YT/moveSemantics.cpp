@@ -3,6 +3,8 @@ using namespace std;
 
 void swap(int &a, int &b) ;
 
+string printMe(void);
+
 int main(void) {
     int a;
     int b;
@@ -14,6 +16,11 @@ int main(void) {
     printf("Second number : %d\n", b);
     cout << "Number after swapping are : " << endl;
     swap(a, b);
+    
+    string s = printMe();
+
+    string&& ss = printMe();
+
     printf("First number : %d\n", a);
     printf("Second number : %d\n", b);
     return 0;
@@ -21,6 +28,10 @@ int main(void) {
 
 void swap(int &a, int &b) {
     int swap = move(a);
-    a = b;
-    b = swap;
+    a = move(b);
+    b = move(swap);
+}
+
+string printMe(void) {
+    return "I am print\n";
 }
