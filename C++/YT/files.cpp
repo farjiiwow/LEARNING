@@ -13,7 +13,9 @@ int main(void) {
     // FILE *fh = fopen(originalFile, "w");
     // fclose(fh);
 
-    rename(originalFile, editedFile);
+    // rename(originalFile, editedFile);
+
+    remove(editedFile);
 
     return 0;
 }
