@@ -14,7 +14,7 @@ int main(void) {
     cout << endl;
     
     
-    if(binary_search(numbers, numbers + 6, 7)) {
+    if(binary_search(numbers, numbers + 6, 17)) {
         cout << "Number Found" << endl;
     } else {
         cout << "Number Not Found" << endl;
