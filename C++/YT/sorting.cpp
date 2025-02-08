@@ -4,20 +4,20 @@ using namespace std;
 
 int main(void) {
     
-    int numbers[6] = {3, 2, 6, 4, 7, 9};
+    float numbers[6] = {3.3, 2.5, 6.3, 4.7, 7.4, 9.8};
 
     cout << "Unsorted Values: " << endl;
-    for(int n : numbers) {
+    for(float n : numbers) {
         cout << n << " ";
     }
 
     cout << endl;
     
-    // sort(numbers, numbers + 6);
-    sort_heap(numbers, numbers + 6);
+    sort(numbers, numbers + 6);
+    // sort_heap(numbers, numbers + 6);
 
     cout << "Sorted Values: " << endl;
-    for(int n : numbers) {
+    for(float n : numbers) {
         cout << n << " ";
     }
     cout << endl;
