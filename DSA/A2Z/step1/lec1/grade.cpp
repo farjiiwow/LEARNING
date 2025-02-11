@@ -11,19 +11,19 @@ int main(void)
     {
         cout << "Grade F" << endl;
     }
-    else if (marks >= 25 && marks <= 44)
+    else if (marks <= 44)
     {
         cout << "Grade E" << endl;
     }
-    else if (marks >= 45 && marks <= 49)
+    else if (marks <= 49)
     {
         cout << "Grade D" << endl;
     }
-    else if (marks >= 50 && marks <= 59)
+    else if (marks <= 59)
     {
         cout << "Grade C" << endl;
     }
-    else if (marks >= 60 && marks <= 69)
+    else if (marks <= 69)
     {
         cout << "Grade B" << endl;
     }
