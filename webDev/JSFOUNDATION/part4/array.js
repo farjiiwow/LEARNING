@@ -20,3 +20,16 @@ teaTypes[1] = "jasmine tea";
 
 console.log(teaTypes[1]);
 console.log(teaTypes);
+
+let citiesVisited = ["Mumbai", "Sydney"];
+
+citiesVisited.push("Berlin");
+
+console.log(citiesVisited);
+
+let teaOrders = ["chai", "iced tea", "matcha", "earl grey"];
+
+const lastOrder = teaOrders.pop();
+console.log(lastOrder);
+
+console.log(teaOrders);
