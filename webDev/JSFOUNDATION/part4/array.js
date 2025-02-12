@@ -11,3 +11,12 @@ let cities = ["London", "Tokyo", "Paris", "New York"];
 let favoriteCity = cities[2];
 
 console.log(favoriteCity);
+
+let teaTypes = ["herbal tea", "white tea", "masala chai"];
+
+console.log(teaTypes);
+
+teaTypes[1] = "jasmine tea";
+
+console.log(teaTypes[1]);
+console.log(teaTypes);
