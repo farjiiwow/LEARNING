@@ -65,3 +65,22 @@ topCities.pop();
 
 console.log(topCities);
 console.log(hardCopyCities);
+
+let europeanCities = ["paris", "rome"];
+let asianCities = ["tokyo", "bangkok"];
+
+let worldCities = europeanCities.concat(asianCities);
+
+console.log(worldCities);
+
+let teaMenu = ["masala chai", "oolng tea", "green tea", "earl grey"];
+
+let = menuLength = teaMenu.length;
+
+console.log(menuLength);
+
+let cityBucketList = ["kyoto", "London", "cape town", "vancouver"];
+
+let isLondonInList = cityBucketList.includes("London");
+
+console.log(isLondonInList);
