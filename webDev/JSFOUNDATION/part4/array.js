@@ -33,3 +33,35 @@ const lastOrder = teaOrders.pop();
 console.log(lastOrder);
 
 console.log(teaOrders);
+
+let var1 = 8;
+let var2 = var1;
+console.log(var2);
+console.log(var1);
+
+var1 = 1;
+console.log(var2);
+console.log(var1);
+
+let popularTeas = ["green tea", "oolong tea", "chai"];
+let softCopyTeas = popularTeas;
+
+console.log(popularTeas);
+console.log(softCopyTeas);
+
+popularTeas.pop();
+
+console.log(popularTeas);
+console.log(softCopyTeas);
+
+let topCities = ["berlin", "singapore", "new york"];
+// let hardCopyCities = [...topCities];
+let hardCopyCities = topCities.slice();
+
+console.log(topCities);
+console.log(hardCopyCities);
+
+topCities.pop();
+
+console.log(topCities);
+console.log(hardCopyCities);
