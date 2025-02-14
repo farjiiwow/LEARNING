@@ -1,0 +1,11 @@
+let teas = ["green tea", "black tea", "chai", "oolong tea"];
+let selectedTeas = [];
+
+for (let i = 0; i < teas.length; i++) {
+  if (teas[i] === "chai") {
+    break;
+  }
+  selectedTeas[i] = teas[i];
+}
+
+console.log(selectedTeas);
