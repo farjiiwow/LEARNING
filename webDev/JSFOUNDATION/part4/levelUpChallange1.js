@@ -5,7 +5,7 @@ for (let i = 0; i < teas.length; i++) {
   if (teas[i] === "chai") {
     break;
   }
-  selectedTeas[i] = teas[i];
+  selectedTeas.push(teas[i]);
 }
 
 console.log(selectedTeas);
