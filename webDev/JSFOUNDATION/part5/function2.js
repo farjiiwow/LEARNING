@@ -1,8 +1,9 @@
 function orderTea(teaType) {
   function confirmOrder() {
-    return `Order confirmed for ${teaType}`;
+    return `Order confirm for ${teaType}`;
   }
-  console.log(confirmOrder());
+  return confirmOrder();
 }
 
-orderTea("chai");
+let orderConfirmation = orderTea("chai");
+console.log(orderConfirmation);
