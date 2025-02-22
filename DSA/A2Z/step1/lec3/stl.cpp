@@ -46,4 +46,204 @@ void explainPair(void)
 
 void explainVector(void)
 {
+    cout << "vector: " << endl;
+    vector<int> v;
+    v.push_back(1);
+    v.emplace_back(2);
+    cout << v[0] << " " << v[1] << endl;
+
+    vector<pair<int, int>> vec;
+    vec.push_back({3, 4});
+    vec.emplace_back(5, 9);
+    cout << vec[0].first << " " << vec[0].second << endl;
+    cout << vec[1].first << " " << vec[1].second << endl;
+
+    cout << "V1 vector" << endl;
+
+    vector<int> v1(5, 100);
+    for (auto it4 : v1)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    cout << "V2 vector" << endl;
+    vector<int> v2(5);
+    for (auto it4 : v2)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    cout << "V3 vector" << endl;
+    vector<int> v3(5, 30);
+    for (auto it4 : v3)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    cout << "v4 vector" << endl;
+    vector<int> v4(v3);
+    for (auto it4 : v4)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    printf("%p \n", v3);
+    printf("%p \n", v4.begin());
+    // deep copy (different memory addresss)
+
+    vector<int> v5;
+    v5.push_back(11);
+    v5.push_back(22);
+    v5.push_back(33);
+    v5.push_back(44);
+    v5.push_back(55);
+
+    cout << v5[0] << " " << v5[1] << " " << v5[2] << " " << v5[3] << " " << v5[4] << endl;
+    cout << v5.at(0) << " " << v5.at(1) << " " << v5.at(2) << " " << v5.at(3) << " " << v5.at(4) << endl;
+
+    vector<int>::iterator it = v5.begin();
+    printf("%p \n", it);
+    cout << *(it) << endl;
+    it++;
+    cout << *(it) << endl;
+
+    it = it + 2;
+    cout << *(it) << endl;
+
+    vector<int>::iterator it1 = v5.end();
+    printf("%p \n", it1);
+    cout << *(it1) << endl;
+    it1--;
+    cout << *(it1) << endl;
+
+    vector<int>::reverse_iterator it2 = v5.rend();
+    printf("%p \n", it2);
+    cout << *(it2) << endl;
+    it2--;
+    cout << *(it2) << endl;
+    it2--;
+    cout << *(it2) << endl;
+
+    vector<int>::reverse_iterator it3 = v5.rbegin();
+    printf("%p \n", it3);
+    cout << *(it3) << endl;
+    it3++;
+    cout << *(it3) << endl;
+
+    cout << endl;
+
+    for (vector<int>::iterator it4 = v5.begin(); it4 != v5.end(); it4++)
+    {
+        cout << *(it4) << " ";
+    }
+    cout << endl;
+
+    for (auto it4 = v5.begin(); it4 != v5.end(); it4++)
+    {
+        cout << *(it4) << " ";
+    }
+    cout << endl;
+
+    for (auto it4 : v5)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    vector<int> v6(v5);
+    for (auto it4 : v6)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    v6.erase(v6.begin()); // 22, 33, 44, 55
+    for (auto it4 : v6)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+    v6.erase(v6.begin() + 1); // 22, 44, 55
+    for (auto it4 : v6)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    // v.erase(start, end)
+    vector<int> v7(v5);
+    v7.erase(v7.begin() + 1, v7.begin() + 4);
+    for (auto it4 : v7)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    vector<int> v8 = {10, 20, 30, 40, 50};
+    for (auto it4 : v8)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    vector<int> v9(2, 100);
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+    v9.insert(v9.begin(), 300); // 300, 100, 100
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    v9.insert(v9.begin() + 1, 3, 99); // 300, 99, 99, 99, 100, 100
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    vector<int> copy(2, 11); // 300, 99, 99, 99, 11, 11, 100, 100
+    v9.insert(v9.begin() + 4, copy.begin(), copy.end());
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    cout << v9.size() << endl;
+
+    v9.pop_back(); // 300, 99, 99, 99, 11, 11, 100
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+
+    vector<int> v10 = {11, 22};
+    vector<int> v11 = {33, 44};
+    v10.swap(v11);
+    for (auto it4 : v10) // 33, 44
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+    for (auto it4 : v11) // 11, 22
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
+    v9.clear();
+    for (auto it4 : v9)
+    {
+        cout << it4 << " ";
+    }
+    cout << endl;
 }
