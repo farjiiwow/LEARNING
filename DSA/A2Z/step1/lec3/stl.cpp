@@ -16,6 +16,8 @@ void explainPair(void);
 
 void explainVector(void);
 
+void explainList(void);
+
 int main(void)
 {
 
@@ -23,6 +25,7 @@ int main(void)
     cout << sum(2, 3) << endl;
     explainPair();
     explainVector();
+    explainList();
 
     return 0;
 }
@@ -246,4 +249,46 @@ void explainVector(void)
         cout << it4 << " ";
     }
     cout << endl;
+}
+
+void explainList()
+{
+    list<int> ls = {11, 22, 33, 44, 55};
+    for (auto it : ls)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    list<int> ls1;
+    ls1.push_back(1);
+    for (auto it : ls1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    ls1.emplace_back(3);
+    for (auto it : ls1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    ls1.push_front(5);
+    for (auto it : ls1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    ls1.emplace_front(7);
+    for (auto it : ls1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    // rest function are same as vector
+    //  begin, end, rbegin, rend, clear, insert, size, swap
 }
