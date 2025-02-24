@@ -24,6 +24,8 @@ void explainStack(void);
 
 void explainQueue(void);
 
+void explainPq(void);
+
 int main(void)
 {
 
@@ -35,6 +37,7 @@ int main(void)
     explainDeque();
     explainStack();
     explainQueue();
+    explainPq();
 
     return 0;
 }
@@ -410,4 +413,36 @@ void explainQueue(void)
     cout << q.front() << endl;
 
     // size, swap, empty same as stack
+}
+
+void explainPq(void)
+{
+    // max heap
+    priority_queue<int> pq;
+
+    cout << "Priority queue" << endl;
+
+    pq.push(5);
+
+    pq.push(2);
+
+    pq.push(8);
+
+    pq.emplace(10);
+
+    cout << pq.top() << endl;
+
+    pq.pop();
+
+    cout << pq.top() << endl;
+
+    // size swap empty function same as others
+
+    priority_queue<int, vector<int>, greater<int>> pq1;
+    pq1.push(2);
+    pq1.push(5);
+    pq1.push(8);
+    pq1.emplace(10);
+
+    cout << pq1.top() << endl;
 }
