@@ -18,6 +18,8 @@ void explainVector(void);
 
 void explainList(void);
 
+void explainDeque(void);
+
 int main(void)
 {
 
@@ -26,6 +28,7 @@ int main(void)
     explainPair();
     explainVector();
     explainList();
+    explainDeque();
 
     return 0;
 }
@@ -290,5 +293,63 @@ void explainList()
     cout << endl;
 
     // rest function are same as vector
+    //  begin, end, rbegin, rend, clear, insert, size, swap
+}
+
+void explainDeque(void)
+{
+    deque<int> dq;
+
+    cout << "Deque" << endl;
+
+    dq.push_back(1);
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    dq.emplace_back(2);
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    dq.push_front(4);
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    dq.emplace_front(3);
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    dq.pop_back();
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    dq.pop_front();
+
+    for (auto it : dq)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    // rest function same as vector
     //  begin, end, rbegin, rend, clear, insert, size, swap
 }
