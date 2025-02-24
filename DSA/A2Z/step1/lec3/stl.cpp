@@ -22,6 +22,8 @@ void explainDeque(void);
 
 void explainStack(void);
 
+void explainQueue(void);
+
 int main(void)
 {
 
@@ -32,6 +34,7 @@ int main(void)
     explainList();
     explainDeque();
     explainStack();
+    explainQueue();
 
     return 0;
 }
@@ -384,4 +387,27 @@ void explainStack(void)
 
     stack<int> st1, st2;
     st1.swap(st2);
+}
+
+void explainQueue(void)
+{
+    queue<int> q;
+
+    cout << "queue" << endl;
+
+    q.push(1);
+    q.push(2);
+    q.emplace(4);
+
+    q.back() += 5;
+
+    cout << q.back() << endl;
+
+    cout << q.front() << endl;
+
+    q.pop();
+
+    cout << q.front() << endl;
+
+    // size, swap, empty same as stack
 }
