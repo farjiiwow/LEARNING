@@ -20,6 +20,8 @@ void explainList(void);
 
 void explainDeque(void);
 
+void explainStack(void);
+
 int main(void)
 {
 
@@ -29,6 +31,7 @@ int main(void)
     explainVector();
     explainList();
     explainDeque();
+    explainStack();
 
     return 0;
 }
@@ -350,6 +353,35 @@ void explainDeque(void)
     }
     cout << endl;
 
+    cout << dq.back() << endl;
+
+    cout << dq.front() << endl;
+
     // rest function same as vector
     //  begin, end, rbegin, rend, clear, insert, size, swap
+}
+
+void explainStack(void)
+{
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4);
+    st.emplace(5);
+
+    cout << "stack" << endl;
+
+    cout << st.top() << endl;
+
+    st.pop();
+
+    cout << st.top() << endl;
+
+    cout << st.size() << endl;
+
+    cout << st.empty() << endl;
+
+    stack<int> st1, st2;
+    st1.swap(st2);
 }
