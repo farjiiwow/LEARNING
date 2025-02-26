@@ -471,27 +471,27 @@ void explainSet(void)
 
     // {1, 2, 3, 4, 5}
     auto it = st.find(3);
-    cout << *(it) << endl;
+    printf("%p \n", it);
 
-    auto it = st.find(5);
-    cout << *(it) << endl;
+    auto it1 = st.find(5);
+    printf("%p \n", it1);
 
-    auto it = st.find(6);
-    cout << *(it) << endl;
+    auto it2 = st.find(6);
+    printf("%p \n", it2);
 
     st.erase(5); // take logarithmic time
 
-    int cnt = st.count(1);
+    int count = st.count(1);
 
-    auto it = st.find(3);
-    st.erase(it); // it take constant time
+    auto it3 = st.find(3);
+    st.erase(it3); // it take constant time
 
-    auto it1 = st.find(2);
-    auto it2 = st.find(4);
-    st.erase(it1, it2); // after erase {1, 4, 5} [first, last)
+    auto it4 = st.find(2);
+    auto it5 = st.find(4);
+    st.erase(it4, it5); // after erase {1, 4, 5} [first, last)
 
-    auto it = st.lower_bound(2);
-    cout << *(it) << endl;
-    auto it = st.upper_bound(3);
-    cout << *(it) << endl;
+    auto it6 = st.lower_bound(2);
+    cout << *(it6) << endl;
+    auto it7 = st.upper_bound(3);
+    cout << *(it7) << endl;
 }
