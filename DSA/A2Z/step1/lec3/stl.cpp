@@ -30,6 +30,8 @@ void explainSet(void);
 
 void explainMultiSet(void);
 
+void explainUSet(void);
+
 int main(void)
 {
 
@@ -44,6 +46,7 @@ int main(void)
     explainPq();
     explainSet();
     explainMultiSet();
+    explainUSet();
 
     return 0;
 }
@@ -527,4 +530,17 @@ void explainMultiSet(void)
     cout << endl;
 
     // rest all function are same as set
+}
+
+void explianUSet(void)
+{
+    unordered_set<int> ust;
+    /*
+    lower bound and upper bound function
+    does not works, rest all functions
+    are same as above, it  does not stores
+    in any particular order it has a better
+    complexity than set in most cases,
+    except some when collision happens
+    */
 }
