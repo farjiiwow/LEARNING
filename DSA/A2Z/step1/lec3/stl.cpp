@@ -28,6 +28,8 @@ void explainPq(void);
 
 void explainSet(void);
 
+void explainMultiSet(void);
+
 int main(void)
 {
 
@@ -41,6 +43,7 @@ int main(void)
     explainQueue();
     explainPq();
     explainSet();
+    explainMultiSet();
 
     return 0;
 }
@@ -494,4 +497,34 @@ void explainSet(void)
     cout << *(it6) << endl;
     auto it7 = st.upper_bound(3);
     cout << *(it7) << endl;
+}
+
+void explainMultiSet(void)
+{
+
+    // everything is same as set
+    // stores duplicate elements also
+
+    cout << "Multiset" << endl;
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    multiset<int> ms1;
+    ms1 = ms;
+    ms.erase(1);
+    int cnt = ms.count(1);
+    cout << cnt << endl;
+
+    ms1.erase(ms1.find(1));
+
+    int cnt1 = ms1.count(1);
+    cout << cnt1 << endl;
+    for (auto x : ms1)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    // rest all function are same as set
 }
