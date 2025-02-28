@@ -32,6 +32,12 @@ void explainMultiSet(void);
 
 void explainUSet(void);
 
+void explainMap(void);
+
+void explainMultiMap(void);
+
+void explainUnorderedMap(void);
+
 int main(void)
 {
 
@@ -47,6 +53,9 @@ int main(void)
     explainSet();
     explainMultiSet();
     explainUSet();
+    explainMap();
+    explainMultiMap();
+    explainUnorderedMap();
 
     return 0;
 }
@@ -532,7 +541,7 @@ void explainMultiSet(void)
     // rest all function are same as set
 }
 
-void explianUSet(void)
+void explainUSet(void)
 {
     unordered_set<int> ust;
     /*
@@ -543,4 +552,53 @@ void explianUSet(void)
     complexity than set in most cases,
     except some when collision happens
     */
+}
+
+void explainMap(void)
+{
+
+    cout << "Map" << endl;
+    map<int, int> mp;
+
+    map<int, pair<int, int>> mp1;
+
+    map<pair<int, int>, int> mp2;
+
+    mp[1] = 2;
+
+    mp.emplace(3, 1);
+
+    mp.insert({2, 4});
+
+    mp2[{2, 3}] = 10;
+
+    for (auto it : mp)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    cout << mp[1] << endl;
+    cout << mp[5] << endl;
+
+    auto it = mp.find(3);
+    cout << it->second << endl;
+
+    auto it1 = mp.find(5);
+    cout << it1->second << endl;
+
+    auto it2 = mp.lower_bound(2);
+    auto it3 = mp.upper_bound(3);
+
+    // erase, swap, size, empty are same
+}
+
+void explainMultiMap(void)
+{
+    // everything same as map, only it can store multiple keys
+    // only map[key] cannot be used here
+}
+
+void explainUnorderedMap(void)
+{
+    // same as set and unordered_set difference
 }
