@@ -38,6 +38,10 @@ void explainMultiMap(void);
 
 void explainUnorderedMap(void);
 
+void explainExtra(void);
+
+bool comp(pair<int, int>, pair<int, int>);
+
 int main(void)
 {
 
@@ -56,6 +60,7 @@ int main(void)
     explainMap();
     explainMultiMap();
     explainUnorderedMap();
+    explainExtra();
 
     return 0;
 }
@@ -601,4 +606,124 @@ void explainMultiMap(void)
 void explainUnorderedMap(void)
 {
     // same as set and unordered_set difference
+}
+
+void explainExtra(void)
+{
+    cout << "sort" << endl;
+
+    // sort(start_iterator, end_iterator);
+
+    vector<int> v = {1, 5, 3, 2};
+
+    vector<int> v1 = v;
+
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    sort(v.begin(), v.end());
+
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    for (auto it : v1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    sort(v1.begin(), v1.end(), greater<int>());
+
+    for (auto it : v1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    pair<int, int> a[] = {{1, 2}, {2, 1}, {4, 1}};
+
+    // pair<int, int> a[] = {{1, 4},
+    //                       {3, 2},
+    //                       {2, 4},
+    //                       {4, 1}};
+
+    // sort it according to second element
+    // if second element is same, then sort
+    // it according to first element but in descending
+
+    for (auto it : a)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    sort(a, a + 3, comp);
+
+    for (auto it : a)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    int num = 7;
+    int cnt = __builtin_popcount(num);
+    cout << "popcount :" << endl;
+    cout << cnt << endl;
+
+    int num2 = 6;
+    int cnt2 = __builtin_popcount(num2);
+    cout << cnt2 << endl;
+
+    long long num3 = 165786578687;
+    int cnt3 = __builtin_popcountll(num3);
+    cout << cnt3 << endl;
+
+    cout << "permutation" << endl;
+
+    string s = "123";
+    sort(s.begin(), s.end());
+
+    do
+    {
+        cout << s << endl;
+    } while (next_permutation(s.begin(), s.end()));
+
+    string s1 = "231";
+    cout << "second " << endl;
+    do
+    {
+        cout << s1 << endl;
+    } while (next_permutation(s1.begin(), s1.end()));
+
+    cout << "max element from array" << endl;
+
+    int arr[] = {1, 2, 3, 5, 4, 23, 56, 1, 5, 93, 23, 5, 66, 77};
+
+    int maxi = *max_element(arr, arr + 14);
+
+    cout << maxi << endl;
+
+    cout << "min element from array" << endl;
+
+    int min = *min_element(arr, arr + 14);
+
+    cout << min << endl;
+}
+
+bool comp(pair<int, int> p1, pair<int, int> p2)
+{
+    if (p1.second < p2.second)
+        return true;
+    if (p1.second > p2.second)
+        return false;
+
+    // same
+
+    if (p1.first > p2.first)
+        return true;
+    return false;
 }
