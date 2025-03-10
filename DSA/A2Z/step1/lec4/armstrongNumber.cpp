@@ -1,9 +1,11 @@
+// TC - O(log|x|)
+// SC - O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 
 bool isArmstrong(int num)
 {
-    // Write your code here
     int count = 0;
     int x;
     int y = num;
