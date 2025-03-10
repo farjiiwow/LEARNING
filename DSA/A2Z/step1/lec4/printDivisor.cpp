@@ -1,32 +1,45 @@
-// TC - O(N)
+// TC - O(sqrt(n))
 
 #include <bits/stdc++.h>
+#include <vector>
 using namespace std;
 
 class PrintDivisor
 {
 public:
-    void printDivisor(int &);
+    vector<int> printDivisor(int &);
 };
 
-void PrintDivisor::printDivisor(int &num)
+vector<int> PrintDivisor::printDivisor(int &num)
 {
-    for (int i = 1; i <= num; i++)
+    vector<int> divisor;
+    for (int i = 1; i <= sqrt(num); i++)
     {
         if (num % i == 0)
         {
-            cout << i << " ";
+            divisor.push_back(i);
+        }
+
+        if (i != num / i)
+        {
+            divisor.push_back(num / i);
         }
     }
-    cout << endl;
+    sort(divisor.begin(), divisor.end());
+    return divisor;
 }
 
 int main(void)
 {
     PrintDivisor obj;
     int num;
-    cout << "Enter a number : " << endl;
+    cout << "Enter a number : ";
     cin >> num;
-    obj.printDivisor(num);
+    vector<int> divisor;
+    divisor = obj.printDivisor(num);
+    for (auto it : divisor)
+    {
+        cout << it << " ";
+    }
     return 0;
 }
