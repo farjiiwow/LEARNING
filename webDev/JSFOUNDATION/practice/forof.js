@@ -31,3 +31,20 @@ let set = new Set([1, 2, 3, 4, 5, 6, 7]);
 for (const value of set) {
   console.log(value);
 }
+
+// typed array
+console.log("typed array");
+let typedArray = new Uint8Array([1, 2, 3, 4]);
+for (const value of typedArray) {
+  console.log(value);
+}
+
+// arguments
+
+function foo() {
+  for (const value of arguments) {
+    console.log(value);
+  }
+}
+
+foo(1, 2, 3, "Hello", 6, 7, 8, "yep");
