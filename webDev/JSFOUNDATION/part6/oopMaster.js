@@ -86,3 +86,27 @@ console.log(person.getBalance());
 
 person.deposit(1000);
 console.log(person.getBalance());
+
+// Abstraction
+
+class CoffeeMachine {
+  start() {
+    // call DB
+    // filter value
+    return `Starting the machine ...`;
+  }
+
+  brewCoffee() {
+    // complex calculation
+    return `Brewing coffee`;
+  }
+
+  pressStartButton() {
+    return `${this.start()} + ${this.brewCoffee()}`;
+  }
+}
+
+let myMachine = new CoffeeMachine();
+console.log(myMachine.pressStartButton());
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
