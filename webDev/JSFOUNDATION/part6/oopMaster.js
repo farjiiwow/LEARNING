@@ -179,3 +179,30 @@ console.log(anotherPerson.name);
 anotherPerson.salary = 100000;
 console.log(anotherPerson.salary);
 // console.log(anotherPerson._salary);
+
+// use case of getter and setter
+// anotherPerson._salary = -10000;
+// console.log(anotherPerson._salary);
+
+// use case of getter and setter
+
+class Guy {
+  constructor(name, age) {
+    if (age < 0) {
+      throw new Error("Invalid Age");
+    }
+    this.name = name;
+    this._age = age;
+  }
+}
+
+let ram = new Guy("ram", 20);
+console.log(ram._age);
+
+// now if we set age
+ram._age = -10;
+console.log(ram._age);
+// so these time age just don't check the condition
+// it just check only at the time when object made
+// that's why we can use here getter and setter
+// to check each time when value is modified
