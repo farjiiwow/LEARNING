@@ -110,3 +110,27 @@ let myMachine = new CoffeeMachine();
 console.log(myMachine.pressStartButton());
 // console.log(myMachine.start());
 // console.log(myMachine.brewCoffee());
+
+// polymorphism
+
+class Bird {
+  fly() {
+    return `Flying ...`;
+  }
+}
+
+class Penguin extends Bird {
+  fly() {
+    return `Can't Fly`;
+  }
+}
+
+class Sparrow extends Bird {}
+
+let bird = new Bird();
+let penguin = new Penguin();
+let sparrow = new Sparrow();
+
+console.log(bird.fly());
+console.log(penguin.fly());
+console.log(sparrow.fly());
