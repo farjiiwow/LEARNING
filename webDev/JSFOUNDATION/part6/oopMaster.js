@@ -65,3 +65,24 @@ console.log(myCar.drive());
 
 let vehOne = new Vehicle("Tata", "Safari");
 console.log(vehOne.make);
+
+// Encapsulation
+
+class BankAccount {
+  #balance = 0;
+
+  deposit(amount) {
+    this.#balance += amount;
+    return this.#balance;
+  }
+
+  getBalance() {
+    return `$${this.#balance}`;
+  }
+}
+
+let person = new BankAccount();
+console.log(person.getBalance());
+
+person.deposit(1000);
+console.log(person.getBalance());
