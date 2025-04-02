@@ -134,3 +134,48 @@ let sparrow = new Sparrow();
 console.log(bird.fly());
 console.log(penguin.fly());
 console.log(sparrow.fly());
+
+// static
+
+class Calculator {
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+// let miniCalc = new Calculator();
+// console.log(miniCalc.add(2, 3));
+
+console.log(Calculator.add(2, 3));
+
+// getter and setter
+
+class Employee {
+  constructor(name, salary) {
+    if (salary < 0) {
+      throw new Error("Invalid Salary");
+    }
+    this.name = name;
+    this._salary = salary;
+  }
+
+  get salary() {
+    return `You are not allowed to see salary`;
+  }
+
+  set salary(salary) {
+    if (salary < 0) {
+      console.log("Invalid Salary");
+    } else {
+      this._salary = salary;
+    }
+  }
+}
+
+let anotherPerson = new Employee("Farjii", 100000);
+console.log(anotherPerson.name);
+// console.log(anotherPerson._salary);
+
+anotherPerson.salary = 100000;
+console.log(anotherPerson.salary);
+// console.log(anotherPerson._salary);
