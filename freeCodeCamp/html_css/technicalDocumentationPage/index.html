@@ -9,47 +9,610 @@
     <nav id="navbar" class="navbar">
       <header id="nav-header" class="nav-header">C++ Documentation</header>
       <ul>
-        <li><a class="nav-link" href="#introduction">Introduction</a></li>
         <li>
-          <a class="nav-link" href="#what-should-known"
+          <a class="nav-link" href="#Introduction">Introduction</a>
+          <ul>
+            <li>
+              <a class="sub-nav-link" href="#what_is_cpp">What is C++?</a>
+            </li>
+            <li>
+              <a class="sub-nav-link" href="#why_use_cpp">Why use C++?</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="#Prerequisites"
             >What you should already know</a
           >
         </li>
-        <li><a class="nav-link" href="#candcpp">C and C++</a></li>
-        <li><a class="nav-link" href="#hello-world">Hello World</a></li>
-        <li><a class="nav-link" href="#variables">Variables</a></li>
+        <li><a class="nav-link" href="#C_and_C++">C and C++</a></li>
+        <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+        
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
         <li>
-          <a class="nav-link" href="#declaring-variables"
+          <a class="nav-link" href="#Data_Types">Data Types</a>
+          <ul>
+            <li><a href="#Number">Number</a></li>
+            <li><a href="#Boolean">Boolean</a></li>
+            <li><a href="#Character">Character</a></li>
+            <li><a href="#Strings">Strings</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="#Declaring_Variables"
             >Declaring Variables</a
           >
         </li>
-        <li><a class="nav-link" href="#variable-scope">Variable Scope</a></li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        
         <li>
-          <a class="nav-link" href="#global-variables">Global Variables</a>
+          <a class="nav-link" href="#if...else_statement"
+            >if...else Statement</a>
+            <ul>
+              <li><a href="#if">if</a></li>
+              <li><a href="#else">else</a></li>
+              <li><a href="#else_if">else if</a></li>
+              <li><a href="#switch">switch</a></li> 
+            </ul>
         </li>
-        <li><a class="nav-link" href="#constants">Constants</a></li>
-        <li><a class="nav-link" href="#data-types">Data Types</a></li>
-        <li><a class="nav-link" href="#if-else">if...else statement</a></li>
-        <li><a class="nav-link" href="#while-statement">While Statement</a></li>
-        <li><a class="nav-link" href="#function">Function Declarations</a></li>
-        <li><a class="nav-link" href="#reference">Reference</a></li>
+        <li><a class="nav-link" href="#While">While</a></li>
+        <li>
+          <a class="nav-link" href="#Function">Function Declarations</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Variable_Scope">Variable Scope</a>
+          <ul>
+            <li><a href="#Local_Scope">Local Scope</a></li>
+            <li><a href="#Global_Scope">Global Scope</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#Reference ">Reference</a></li>
       </ul>
     </nav>
     <main id="main-doc">
-      <section class="main-section" id="introduction"></section>
-      <section class="main-section" id="what-should-known"></section>
-      <section class="main-section" id="candcpp"></section>
-      <section class="main-section" id="hello-world"></section>
-      <section class="main-section" id="variables"></section>
-      <section class="main-section" id="declaring-variables"></section>
-      <section class="main-section" id="variable-scope"></section>
-      <section class="main-section" id="global-variables"></section>
-      <section class="main-section" id="constants"></section>
-      <section class="main-section" id="data-types"></section>
-      <section class="main-section" id="if-else"></section>
-      <section class="main-section" id="while-statement"></section>
-      <section class="main-section" id="function"></section>
-      <section class="main-section" id="reference"></section>
+      <section class="main-section" id="Introduction">
+        <header><h1>Introduction</h1></header>
+        <h3 id="what_is_cpp">What is C++?</h3>
+        <p>
+          <ul>
+            <li>C++ is a cross-platform language that can be used to create high-performance applications.</li>
+            <li>C++ was developed by Bjarne Stroustrup, as an extension to the C language.</li>
+            <li>C++ gives programmers a high level of control over system resources and memory.</li>
+            <li>The language was updated 5 major times in 2011, 2014, 2017, 2020, and 2023 to C++11, C++14, C++17, C++20, and C++23.</li>
+          </ul>
+        </p>
+        <h3 id="why_use_cpp">Why Use C++</h3>
+        <ul>
+          <li>C++ is one of the world's most popular programming languages.</li>
+          <li>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</li>
+          <li>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</li>
+          <li>C++ is portable and can be used to develop applications that can be adapted to multiple platforms.</li>
+          <li>C++ is fun and easy to learn!</li>
+          <li>As C++ is close to C, C# and Java, it makes it easy for programmers to switch to C++ or vice versa.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Prerequisites">
+        <header><h1>What you should already know</h1></header>
+        <p>To start using C++, you need two things:
+          <ul>
+            <li>A text editor, like Notepad, to write C++ code</li>
+            <li>A compiler, like GCC, to translate the C++ code into a language that the computer will understand</li>
+          </ul>
+        </p>
+      </section>
+      <section class="main-section" id="C_and_C++">
+        <header><h1>C and C++</h1></header>
+        <p>
+          <ul>
+            <li>C++ was developed as an extension of C, and both languages have almost the same syntax.</li>
+            <li>The main difference between C and C++ is that C++ supports classes and objects, while C does not.</li>
+          </ul>
+        </p>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header><h1>Hello World</h1></header>
+        <article>
+          <p>Let's break up the following code to understand it better:</p>
+          <code>
+            #include <iostream>
+            using namespace std;
+
+            int main() {  
+              cout << "Hello World!";
+              return 0;
+            }
+          </code>
+          <p>
+            <ul>
+              <li>
+                Line 1: <code>#include <iostream></code> is a header file library that lets us work with input and output objects, such as <code>cout</code> (used in line 5). Header files add functionality to C++ programs.
+              </li>
+              <li>Line 2: <code>using namespace std</code> means that we can use names for objects and variables from the standard library.</li>
+              <li>Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.</li>
+              <li>Line 4: Another thing that always appear in a C++ program is <code>int main()</code>. This is called a function. Any code inside its curly brackets <code>{}</code> will be executed.</li>
+              <li>Line 5: <code>cout</code> (pronounced "see-out") is an object used together with the insertion operator <code>(<<)</code> to output/print text. In our example, it will output <code>"Hello World!"</code>.</li>
+              <li>Note: C++ is case-sensitive: "cout" and "Cout" has different meaning.</li>
+              <li>Note: Every C++ statement ends with a semicolon <code>;</code>.</li>
+              <li>Note: The body of <code>int main()</code> could also been written as:</li>
+              <li><code>int main () { cout << "Hello World! "; return 0; }</code></li>
+              <li>Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.</li>
+              <li>
+                Line 6: <code>return 0;</code> ends the main function.
+              </li>
+              <li>Line 7: Do not forget to add the closing curly bracket <code>}</code> to actually end the main function.</li>
+            </ul>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header><h1>Variables</h1></header>
+        <p>
+          Variables are containers for storing data values. <br><br>
+          In C++, there are different types of variables (defined with different keywords), for example: <br><br>
+          <ul>
+            <li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123
+</li>
+            <li><code>double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+            <li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+</li>
+            <li><code>string</code> - stores text, such as "Hello World". String values are surrounded by double quotes
+</li>
+            <li><code>bool</code> - stores values with two states: true or false
+</li>
+          </ul>
+
+        </p>
+      </section>
+      <section class="main-section" id="Data_Types">
+        <header><h1>Data Types</h1></header>
+        <article>
+        <p>
+          As explained in the Variables chapter, a variable in C++ must be a specified data type:
+        </p>
+        <code>
+          int myNum = 5;               // Integer (whole number)
+          float myFloatNum = 5.99;     // Floating point number
+          double myDoubleNum = 9.98;   // Floating point number
+          char myLetter = 'D';         // Character
+          bool myBoolean = true;       // Boolean
+          string myText = "Hello";     // String
+        </code>
+        </article>
+        <h3 id="Number">Number</h3>
+        <article>
+          <p>Use <code>int</code> when you need to store a whole number without decimals, like 35 or 1000, and <code>float</code> or <code>double</code> when you need a floating point number (with decimals), like 9.99 or 3.14515.</p>
+          <h4>int</h4>
+          <code>
+            int myNum = 1000;
+            cout << myNum;
+          </code>
+          <h4>float</h4>
+          <code>
+            float myNum = 5.75;
+            cout << myNum;
+          </code>
+          <h4>double</h4>
+          <code>
+            double myNum = 19.99;
+            cout << myNum;
+          </code>
+        </article>
+        <h3 id="Boolean">Boolean</h3>
+        <article>
+          <p>
+            A boolean data type is declared with the <code>bool</code> keyword and can only take the values <code>true</code> or <code>false</code>.
+
+            When the value is returned, <code>true = 1</code> and <code>false = 0</code>.
+          </p>
+          <code>
+            bool isCodingFun = true;
+            bool isFishTasty = false;
+            cout << isCodingFun;  // Outputs 1 (true)
+            cout << isFishTasty;  // Outputs 0 (false)
+          </code>
+        </article>
+        <h3 id="Character">Character</h3>
+        <article>
+          <p>
+            The <code>char</code> data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+          </p>
+          <code>
+            char myGrade = 'B';
+            cout << myGrade;
+          </code>
+          <p>
+            Alternatively, if you are familiar with ASCII, you can use ASCII values to display certain characters:
+          </p>
+          <code>
+            char a = 65, b = 66, c = 67;
+            cout << a;
+            cout << b;
+            cout << c;
+          </code>
+        </article>
+        <h3 id="Strings">Strings</h3>
+        <article>
+          <p>
+            The <code>string</code> type is used to store a sequence of characters (text). This is not a built-in type, but it behaves like one in its most basic usage. String values must be surrounded by double quotes:
+          </p>
+          <code>
+            string greeting = "Hello";
+            cout << greeting;
+          </code>
+          <p>
+            To use strings, you must include an additional header file in the source code, the <code>string</code> library:
+          </p>
+          <code>
+            // Include the string library
+            #include <string>
+            
+            // Create a string variable
+            string greeting = "Hello";
+            
+            // Output string value
+            cout << greeting;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Declaring_Variables">
+        <header><h1>Declaring Variables</h1></header>
+        <p>
+          To create a variable, specify the type and assign it a value: <br><br>
+          <code>type variableName = value;
+</code><br><br>
+        Where type is one of C++ types (such as int), and variableName is the name of the variable (such as x or myName). The equal sign is used to assign values to the variable.
+        </p>
+        <p>
+          To create a variable that should store a number, look at the following example: <br><br>
+          <code>
+            int myNum = 15;
+cout << myNum;
+          </code><br><br>
+          Create a variable called myNum of type int and assign it the value 15:
+        </p>
+        <p>
+          You can also declare a variable without assigning the value, and assign the value later: <br> <br>
+          <code>int myNum;
+myNum = 15;
+cout << myNum;</code>
+        </p>
+        <p>
+          Note that if you assign a new value to an existing variable, it will overwrite the previous value: <br><br>
+          <code>int myNum = 15;  // myNum is 15
+myNum = 10;  // Now myNum is 10
+cout << myNum;  // Outputs 10</code>
+        </p>
+        <p>
+          A demonstration of other data types: <br><br>
+          <code>
+            int myNum = 5;               // Integer (whole number without decimals)
+double myFloatNum = 5.99;    // Floating point number (with decimals)
+char myLetter = 'D';         // Character
+string myText = "Hello";     // String (text)
+bool myBoolean = true;       // Boolean (true or false)
+          </code>
+        </p>
+      </section>
+      <section class="main-section" id="Constants">
+        <header><h1>Constants</h1></header>
+        <article>
+          <p>
+            When you do not want others (or yourself) to change existing variable values, use the <code>const</code> keyword (this will declare the variable as "constant", which means unchangeable and read-only):
+          </p>
+          <code>
+            const int myNum = 15;  // myNum will always be 15
+            myNum = 10;  // error: assignment of read-only variable 'myNum'
+          </code>
+          <p>
+            You should always declare the variable as constant when you have values that are unlikely to change:
+          </p>
+          <code>
+            const int minutesPerHour = 60;
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="if...else_statement">
+        <header><h1>if...else Statement</h1></header>
+        <p>
+          C++ has the following conditional statements:
+          <br><br>
+          <ul>
+            <li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true
+</li>
+            <li>Use <code>else</code> to specify a block of code to be executed, if the same condition is false
+</li>
+            <li>Use <code>else if</code> to specify a new condition to test, if the first condition is false
+</li>
+            <li>Use <code>switch</code> to specify many alternative blocks of code to be executed
+</li>
+          </ul>
+        </p>
+        <h3 id="if">if</h3>
+        <article>
+          <p>Use the <code>if</code> statement to specify a block of C++ code to be executed if a condition is <code>true</code>.</p>
+          <h4>Syntax</h4>
+          <code>
+            if (condition) {
+            // block of code to be executed if the condition is true
+            }
+          </code>
+          <h4>Example</h4>
+          <p>
+            In the example below, we test two values to find out if 20 is greater than 18. If the condition is <code>true</code>, print some text:
+          </p>
+          <code>
+            if (20 > 18) {
+              cout << "20 is greater than 18";
+            }
+          </code>
+          <p>We can also test variables:</p>
+          <code>
+            int x = 20;
+            int y = 18;
+            if (x > y) {
+              cout << "x is greater than y";
+            }
+          </code>
+          <h4>Example Explained</h4>
+          <p>
+            In the example above we use two variables, x and y, to test whether x is greater than y (using the <code>></code> operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+          </p>
+        </article>
+        <h3 id="else">else</h3>
+        <article>
+          <p>
+            Use the <code>else</code> statement to specify a block of code to be executed if the condition is <code>false</code>.
+          </p>
+          <h4>syntax</h4>
+          <code>
+            if (condition) {
+              // block of code to be executed if the condition is true
+            } else {
+              // block of code to be executed if the condition is false
+            }
+          </code>
+          <h4>Example</h4>
+          <code>
+            int time = 20;
+            if (time < 18) {
+              cout << "Good day.";
+            } else {
+              cout << "Good evening.";
+            }
+            // Outputs "Good evening."
+          </code>
+          <h4>Example explained</h4>
+          <p>
+            In the example above, time (20) is greater than 18, so the condition is <code>false</code>. Because of this, we move on to the <code>else</code> condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".
+          </p>
+        </article>
+        <h3 id="else_if">else if</h3>
+        <article>
+          <p>
+            Use the <code>else if</code> statement to specify a new condition if the first condition is <code>false</code>.
+          </p>
+          <h4>syntax</h4>
+          <code>
+            if (condition1) {
+              // block of code to be executed if condition1 is true
+            } else if (condition2) {
+              // block of code to be executed if the condition1 is false and condition2 is true
+            } else {
+              // block of code to be executed if the condition1 is false and condition2 is false
+            }
+          </code>
+          <h4>Example</h4>
+          <code>
+            int time = 22;
+            if (time < 10) {
+              cout << "Good morning.";
+            } else if (time < 20) {
+              cout << "Good day.";
+            } else {
+              cout << "Good evening.";
+            }
+            // Outputs "Good evening."
+          </code>
+          <h4>Example Explained</h4>
+          <p>In the example above, time (22) is greater than 10, so the first condition is <code>false</code>. The next condition, in the <code>else if</code> statement, is also <code>false</code>, so we move on to the <code>else</code> condition since <b>condition1</b> and <b>condition2</b> is both <code>false</code> - and print to the screen "Good evening".
+          <br><br>
+          However, if the time was 14, our program would print "Good day."</p>
+        </article>
+        <h3 id="switch">switch</h3>
+        <article>
+          <p>
+            Use the switch statement to select one of many code blocks to be executed.
+          </p>
+          <h4>syntax</h4>
+          <code>
+            switch(expression) {
+             case x:
+               // code block
+               break;
+             case y:
+               // code block
+               break;
+             default:
+               // code block
+            }           
+          </code>
+          This is how it works:
+          <p>This is how it works: <br><br>
+          <ul><li>The switch expression is evaluated once
+</li>
+          <li>The value of the expression is compared with the values of each case
+</li>
+          <li>If there is a match, the associated block of code is executed
+</li>
+          <li>The break and default keywords are optional, and will be described later in this chapter
+</li></ul>
+          </p>
+          <p>
+            The example below uses the weekday number to calculate the weekday name:
+          </p>
+          <h4>Example</h4>
+          <code>
+            int day = 4;
+            switch (day) {
+              case 1:
+                cout << "Monday";
+                break;
+              case 2:
+                cout << "Tuesday";
+                break;
+              case 3:
+                cout << "Wednesday";
+                break;
+              case 4:
+                cout << "Thursday";
+                break;
+              case 5:
+                cout << "Friday";
+                break;
+              case 6:
+                cout << "Saturday";
+                break;
+              case 7:
+                cout << "Sunday";
+                break;
+            }
+            // Outputs "Thursday" (day 4)
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="While">
+        <header><h1>While</h1></header>
+        <article>
+          <p>
+            The <code>while</code> loop loops through a block of code as long as a specified condition is true:
+          </p>
+          <h4>Syntax</h4>
+          <code>
+            while (condition) {
+              // code block to be executed
+            }
+          </code>
+          <p>
+            In the example below, the code in the loop will run, over and over again, as long as a variable (<code>i</code>) is less than 5:
+          </p>
+          <h4>Example</h4>
+          <code>
+            int i = 0;
+            while (i < 5) {
+              cout << i << "\n";
+              i++;
+            }
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Function">
+        <header><h1>Function</h1></header>
+        <p>
+          A function is a block of code which only runs when it is called.
+          <br><br>
+          You can pass data, known as parameters, into a function.
+          <br><br>
+          Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.
+        </p>
+        <h4>Create a Function</h4>
+        <p>
+          C++ provides some pre-defined functions, such as <code>main()</code>, which is used to execute code. But you can also create your own functions to perform certain actions.
+          <br><br>
+          To create (often referred to as declare) a function, specify the name of the function, followed by parentheses ():
+        </p>
+        <h4>Syntax</h4>
+        <code>
+          void myFunction() {
+            // code to be executed
+          }
+        </code>
+        <h4>Example explained</h4>
+        <p>
+          <ul><li>
+            <code>myFunction()</code> is the name of the function
+          </li>
+          <li>
+            <code>void</code> means that the function does not have a return value. You will learn more about return values later in the next chapter
+          </li>
+          <li>
+            inside the function (the body), add code that defines what the function should do
+          </li></ul>
+        </p>
+      </section>
+      <section class="main-section" id="Variable_Scope">
+        <header><h1>Variable Scope</h1></header>
+        Now that you understand how functions work, it is important to learn how variables act inside and outside of functions.
+        <br><br>
+        In C++, variables are only accessible inside the region they are created. This is called <code>scope</code>.
+        <h3 id="Local_Scope">Local Scope</h3>
+        <article>
+          <p>A variable created inside a function belongs to the local scope of that function, and can only be used inside that function:</p>
+          <h4>Example</h4>
+          <code>
+            void myFunction() {
+              // Local variable that belongs to myFunction
+              int x = 5;
+
+              // Print the variable x
+              cout << x;
+            }
+
+            int main() {
+              myFunction();
+              return 0;
+            }
+          </code>
+        </article>
+        <h3 id="Global_Scope">Global Scope</h3>
+        <article>
+          <p>
+            A variable created outside of a function, is called a <b>global variable</b> and belongs to the global scope.
+            <br><br>
+            Global variables are available from within any scope, global and local:
+          </p>
+          <h4>Example</h4>
+          <code>
+            // Global variable x
+            int x = 5;
+
+            void myFunction() {
+              // We can use x here
+              cout << x << "\n";
+            }
+
+            int main() {
+              myFunction();
+            
+              // We can also use x here
+              cout << x;
+              return 0;
+            }
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header><h1>Reference</h1></header>
+        <article>
+          <p>A reference variable is a "reference" to an existing variable, and it is created with the & operator:</p>
+          <code>
+            string food = "Pizza";  // food variable
+            string &meal = food;    // reference to food
+          </code>
+          <p>
+            Now, we can use either the variable name <code>food</code> or the reference name <code>meal</code> to refer to the <code>food</code> variable:
+          </p>
+          <h4>
+            Example
+          </h4>
+          <code>
+            string food = "Pizza";
+            string &meal = food;
+
+            cout << food << "\n";  // Outputs Pizza
+            cout << meal << "\n";  // Outputs Pizza
+          </code>
+        </article>
+      </section>
     </main>
   </body>
 </html>
