@@ -18,11 +18,11 @@ vector<int> PrintDivisor::printDivisor(int &num)
         if (num % i == 0)
         {
             divisor.push_back(i);
-        }
 
-        if (i != num / i)
-        {
-            divisor.push_back(num / i);
+            if (i != num / i)
+            {
+                divisor.push_back(num / i);
+            }
         }
     }
     sort(divisor.begin(), divisor.end());
