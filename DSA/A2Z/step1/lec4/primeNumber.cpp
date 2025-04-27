@@ -1,4 +1,4 @@
-// TC - O(N)
+// TC - O(sqrt(N))
 // SC - O(1)
 
 #include <bits/stdc++.h>
