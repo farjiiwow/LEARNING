@@ -23,7 +23,7 @@ bool PrimeNumber::primeNumber(int num)
         {
             count = count + 1;
 
-            if (i != num % i)
+            if (i != num / i)
             {
                 count = count + 1;
             }
