@@ -44,3 +44,46 @@ document
     let taskList = document.getElementById("taskList");
     taskList.lastElementChild.remove();
   });
+
+// example 6
+
+document.getElementById("clickMeButton").addEventListener("click", function () {
+  alert("farjiiwow");
+});
+
+// example 7
+
+document.getElementById("teaList").addEventListener("click", function (event) {
+  if (event.target && event.target.matches(".teaItem")) {
+    alert("You selected : " + event.target.textContent);
+  }
+});
+
+// example 8
+
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let feedback = document.getElementById("feedbackInput").value;
+    console.log(feedback);
+    let feedbackDisplay = document.getElementById("feedbackDisplay");
+    feedbackDisplay.textContent = `Feedback is : ${feedback}`;
+    feedbackDisplay.style.color = "yellow";
+  });
+
+// example 9
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("domStatus").textContent = "DOM fully Loaded";
+});
+
+// example 10
+
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let toggleHighlight = document.getElementById("descriptionText");
+    // console.log(toggleHighlight);
+    toggleHighlight.classList.toggle("highlight");
+  });
