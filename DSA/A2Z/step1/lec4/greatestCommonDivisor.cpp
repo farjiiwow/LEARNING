@@ -1,10 +1,13 @@
+// TC -> O(min(N1, N2))
+// SC -> O(1)
+
 #include <bits/stdc++.h>
 using namespace std;
 
 class GreatestCommonDivisor
 {
 public:
-    int greatestcommonDivisor = INT_MIN;
+    int greatestcommonDivisor = 1;
     int divisor(int num1, int num2);
     int min(int num1, int num2);
 };
@@ -12,11 +15,12 @@ public:
 int GreatestCommonDivisor::divisor(int num1, int num2)
 {
     int minimum = min(num1, num2);
-    for (int i = 1; i <= minimum; i++)
+    for (int i = minimum; i >= 1; i--)
     {
         if (num1 % i == 0 && num2 % i == 0)
         {
             greatestcommonDivisor = i;
+            break;
         }
     }
     return greatestcommonDivisor;
