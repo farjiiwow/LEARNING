@@ -1,0 +1,18 @@
+// TC -> O(1)
+// SC -> O(1)
+
+class Solution
+{
+public:
+    int smallestEvenMultiple(int n)
+    {
+        if (n % 2 == 0)
+        {
+            return n;
+        }
+        else
+        {
+            return 2 * n;
+        }
+    }
+};
